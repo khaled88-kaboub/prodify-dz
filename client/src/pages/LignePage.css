@@ -1,0 +1,155 @@
+/* === Mise en page principale === */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #f4f7f8;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* === Contenu principal === */
+  .content {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* === Titre === */
+  .content h2 {
+    text-align: center;
+    color: #2b7a78;
+    margin-bottom: 25px;
+  }
+  
+  /* === Formulaire === */
+  .form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+  }
+  
+  .form input {
+    padding: 10px 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form input:focus {
+    border-color: #3aafa9;
+  }
+  
+  .form button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    background-color: #3aafa9;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .form button:hover {
+    background-color: #2b7a78;
+    transform: scale(1.02);
+  }
+  
+  .cancel-btn {
+    background-color: #aaa;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #888;
+  }
+  
+  /* === Tableau === */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  .styled-table th {
+    background-color: #3aafa9;
+    color: white;
+  }
+  
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .styled-table tr:hover {
+    background-color: #e9f5f4;
+  }
+  
+  /* === Boutons d’action === */
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .edit-btn {
+    background-color: #2b7a78;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #226c6a;
+  }
+  
+  .delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc0000;
+  }
+  /* === Alignement des boutons à droite === */
+.actions-cell {
+  text-align: right; /* ✅ aligne le contenu à droite */
+  white-space: nowrap; /* empêche le passage à la ligne */
+}
+
+.actions-cell .edit-btn,
+.actions-cell .delete-btn {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+  /* === Responsive === */
+  @media (max-width: 768px) {
+    .form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form input {
+      width: 100%;
+    }
+  
+    .styled-table th,
+    .styled-table td {
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  

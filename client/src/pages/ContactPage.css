@@ -1,0 +1,60 @@
+.contact-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .contact-page h2 {
+    text-align: center;
+    color: #2b7a78;
+    margin-bottom: 10px;
+  }
+  
+  .intro {
+    text-align: center;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    background: #205e5c;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #217b74;
+    transform: scale(1.03);
+  }
+  

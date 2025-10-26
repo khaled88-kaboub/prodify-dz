@@ -1,0 +1,85 @@
+.about-page {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: "Segoe UI", sans-serif;
+    color: #222;
+  }
+  
+  .about-page h2 {
+    text-align: center;
+    color: #2b7a78;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .highlight {
+    color: #205e5c;
+  }
+  
+  .about-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .features {
+    margin-top: 40px;
+  }
+  
+  .features h3 {
+    text-align: center;
+    color: #2b7a78;
+    margin-bottom: 20px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-card .icon {
+    font-size: 2rem;
+    color: #205e5c;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card h4 {
+    color: #205e5c;
+    margin-bottom: 8px;
+  }
+  
+  .mission {
+    margin-top: 40px;
+    text-align: center;
+    background: #e9f7f7;
+    padding: 25px;
+    border-radius: 12px;
+  }
+  
+  .mission h3 {
+    color: #2b7a78;
+    margin-bottom: 15px;
+  }
+  
+  .mission p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  

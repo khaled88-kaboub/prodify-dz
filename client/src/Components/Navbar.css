@@ -1,0 +1,79 @@
+/* ===== Navbar principale ===== */
+.navbar {
+    
+    background-color: #2b7a78; /* vert bleu élégant */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #3aafa9;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ===== Titre à gauche ===== */
+  .navbar-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* ===== Zone droite ===== */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* ===== Message utilisateur ===== */
+  .navbar-user {
+    font-size: 1rem;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .navbar-user strong {
+    color: #ffe082;
+    transition: color 0.3s;
+  }
+  
+  .navbar-user:hover strong {
+    color: #fff176;
+  }
+  
+  /* ===== Bouton Déconnexion ===== */
+  .logout-btn {
+    background-color: #def2f1;
+    color: #17252a;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #3aafa9;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+  
+    .navbar-right {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+  
