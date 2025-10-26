@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./SplashScreen.css";
+import "./Splashscreen.css";
 
 const SplashScreen = () => {
   const [progress, setProgress] = useState(0);
