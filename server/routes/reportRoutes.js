@@ -4,14 +4,15 @@ import { getReports, createReport, updateReport, deleteReport, getDailyProductio
 
 const router = express.Router();
 
+router.route("/:id")
+  .put(protect, updateReport)
+  .delete(protect, deleteReport);
+
 router.get("/daily", protect, getDailyProduction);
 router.route("/")
   .get(protect, getReports)
   .post(protect, createReport);
 
-router.route("/:id")
-  .put(protect, updateReport)
-  .delete(protect, deleteReport);
 
  
 

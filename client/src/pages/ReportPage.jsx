@@ -248,6 +248,9 @@ const exportToPDF = () => {
     setEditingId(rep._id);
   };
 
+  useEffect(() => {
+    console.log("Formulaire actuel :", form);
+  }, [form]);
   return (
     <div className="report-page">
       {/*<button onClick={() => exportReportToPDF(reports)}>📄 Exporter PDF</button>*/}
@@ -399,28 +402,31 @@ const exportToPDF = () => {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-          {reports.map((r) => (
-            <tr key={r._id}>
-              <td>{new Date(r.date).toLocaleDateString()}</td>
-              <td>{r.groupe}</td>
-              <td>{r.shift}</td>
-              <td>{r.categorieProduit?.nom}</td>
-              <td>{r.produit?.nom}</td>
-              <td>{r.ligneProduction?.nom}</td>
-              <td>{r.nombreCartons}</td>
-              <td>{r.dechetsKg}</td>
-              <td>{r.remarques}</td>
-              <td>{r.user?.name || "—"}</td> {/* 🧍 Utilisateur */}
-             <td>{new Date(r.createdAt).toLocaleString()}</td> {/* 🕒 Créé le */}
+        
 
-              <td>
-                <button onClick={() => handleEdit(r)}>✏️</button>
-                <button onClick={() => handleDelete(r._id)}>🗑️</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        <tbody>
+  {reports.map((r) => (
+    <tr key={r._id}>
+      <td>{new Date(r.date).toLocaleDateString()}</td>
+      <td>{r.groupe}</td>
+      <td>{r.shift}</td>
+      <td>{r.categorieProduit?.nom}</td>
+      <td>{r.produit?.nom}</td>
+      <td>{r.ligneProduction?.nom}</td>
+      <td>{r.nombreCartons}</td>
+      <td>{r.dechetsKg}</td>
+      <td>{r.remarques}</td>
+      <td>{r.user?.name || "—"}</td>
+      <td>{new Date(r.createdAt).toLocaleString()}</td>
+      <td>
+        <button onClick={() => handleEdit(r)}>✏️</button>
+        <button onClick={() => handleDelete(r._id)}>🗑️</button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
+
       </table>
 
       

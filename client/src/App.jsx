@@ -42,11 +42,11 @@ function App() {
       <Route path="/rapport" element={<ReportPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      
+      <Route path="/" element={<LoginPage />} />
 
       
       <Route
-        path="/"
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />

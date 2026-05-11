@@ -37,45 +37,14 @@ export const createReport = async (req, res) => {
 //};
 
 
-
-// 🛠️ Modifier un rapport
 export const updateReport = async (req, res) => {
-  try {
-    const report = await Report.findById(req.params.id);
-
-    if (!report) return res.status(404).json({ message: "Rapport introuvable" });
-
-    // ⚠️ Vérification des permissions
-    if (req.user.role !== "admin" && report.user.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ message: "Accès refusé : action non autorisée" });
-    }
-
-    report.title = req.body.title || report.title;
-    report.content = req.body.content || report.content;
-    await report.save();
-
-    res.json(report);
-  } catch (error) {
-    res.status(500).json({ message: "Erreur lors de la mise à jour du rapport" });
-  }
+  const report = await Report.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.json(report);
 };
 
-// ❌ Supprimer un rapport
 export const deleteReport = async (req, res) => {
-  try {
-    const report = await Report.findById(req.params.id);
-    if (!report) return res.status(404).json({ message: "Rapport introuvable" });
-
-    // ⚠️ Vérification des permissions
-    if (req.user.role !== "admin" && report.user.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ message: "Accès refusé : action non autorisée" });
-    }
-
-    await report.deleteOne();
-    res.json({ message: "Rapport supprimé" });
-  } catch (error) {
-    res.status(500).json({ message: "Erreur lors de la suppression du rapport" });
-  }
+  await Report.findByIdAndDelete(req.params.id);
+  res.json({ message: "Rapport supprimé" });
 };
 
 //import Report from "../models/Report.js";

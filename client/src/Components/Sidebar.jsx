@@ -37,7 +37,7 @@ const Sidebar = () => {
 
         <nav className="sidebar-nav">
 
-        <NavLink to="/" className="sidebar-link" onClick={handleLinkClick}>
+        <NavLink to="/dashboard" className="sidebar-link" onClick={handleLinkClick}>
             <FaTachometerAlt className="icon" /> Dashboard
           </NavLink>
 
