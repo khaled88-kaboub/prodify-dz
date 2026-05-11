@@ -42,7 +42,7 @@ function App() {
       <Route path="/rapport" element={<ReportPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={<LoginPage />} />
 
       
       <Route
