@@ -2,7 +2,7 @@ import axios from "axios";
 
 // === CONFIG DE BASE ===
 // 🔧 Change l’URL selon ton backend :
-const API_URL = "https://prodify-dz.onrender.com"; // ou ton URL Render/Netlify
+const API_URL = "https://prodify-dz.onrender.com/api"; // ou ton URL Render/Netlify
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
