@@ -15,6 +15,7 @@ import Sidebar from "./Components/Sidebar";
 //import Navbar from "./Components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import ReportShiftChartPage from "./pages/ReportShiftChartPage";
 
 
 
@@ -32,6 +33,7 @@ function App() {
 
 
       <Route path="/rapport-graph" element={<ReportChartPage />} />
+      <Route path="/rapportshift-graph" element={<ReportShiftChartPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/ligne" element={<LignePage />} />
@@ -40,6 +42,8 @@ function App() {
       <Route path="/rapport" element={<ReportPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/" element={<Dashboard />} />
+
       
       <Route
         path="/"

@@ -127,7 +127,8 @@ const ReportPage = () => {
       "Nombre de cartons": r.nombreCartons,
       "Déchets (kg)": r.dechetsKg,
       Remarques: r.remarques || "",
-      Utilisateur: r.user?.username || "",
+      Utilisateur: r.user?.name || "",
+      "Créé le": new Date(r.createdAt).toLocaleString(),
     }));
   
     // 🔹 Créer une feuille Excel
@@ -158,7 +159,7 @@ const exportToPDF = () => {
   // Titre principal
   doc.setFontSize(22);
   doc.setTextColor(40, 40, 40);
-  doc.text("ProdManager - Rapports de Production", 120, 45);
+  doc.text("Prodify-dz - Rapports de Production", 120, 45);
 
   // Date du rapport
   doc.setFontSize(12);
@@ -180,6 +181,8 @@ const exportToPDF = () => {
     "Cartons",
     "Déchets (kg)",
     "Remarques",
+    "Utilisateur",
+    "Créé le"
   ];
 
   const tableRows = reports.map((r) => [
@@ -192,6 +195,9 @@ const exportToPDF = () => {
     r.nombreCartons,
     r.dechetsKg,
     r.remarques || "",
+    r.user?.name || "",
+    new Date(r.createdAt).toLocaleString()
+  
   ]);
 
   autoTable(doc, {
@@ -268,9 +274,9 @@ const exportToPDF = () => {
           className="forme-group"
         >
           <option value="">-- Choisir un groupe --</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
+          <option value="BOUFASSA">BOUFASSA</option>
+          <option value="MOUHAMMOU">MOUHAMMOU</option>
+          <option value="FEDALA">FEDALA</option>
           <option value="D">D</option>
         </select>
 
@@ -388,6 +394,8 @@ const exportToPDF = () => {
             <th>Cartons</th>
             <th>Déchets</th>
             <th>Remarques</th>
+            <th>Utilisateur</th>
+            <th>Créé le</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -403,6 +411,9 @@ const exportToPDF = () => {
               <td>{r.nombreCartons}</td>
               <td>{r.dechetsKg}</td>
               <td>{r.remarques}</td>
+              <td>{r.user?.name || "—"}</td> {/* 🧍 Utilisateur */}
+             <td>{new Date(r.createdAt).toLocaleString()}</td> {/* 🕒 Créé le */}
+
               <td>
                 <button onClick={() => handleEdit(r)}>✏️</button>
                 <button onClick={() => handleDelete(r._id)}>🗑️</button>

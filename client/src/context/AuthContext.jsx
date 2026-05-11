@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (form) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/users/register", form);
+      const res = await axios.post("https://prodify-dz.onrender.com/api/users/register", form);
       localStorage.setItem("user", JSON.stringify(res.data));
       setUser(res.data);
       navigate("/"); // ✅ redirige vers dashboard
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (form) => {
     try {
-      const res = await axios.post("http://localhost:5000/api/users/login", form);
+      const res = await axios.post("https://prodify-dz.onrender.com/api/users/login", form);
       localStorage.setItem("user", JSON.stringify(res.data));
       setUser(res.data);
       navigate("/");

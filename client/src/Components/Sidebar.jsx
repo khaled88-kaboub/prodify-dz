@@ -10,7 +10,8 @@ import {
   FaChartLine,
   FaTimes,
   FaInfoCircle,
-  FaEnvelope
+  FaEnvelope,
+  FaTachometerAlt
 } from "react-icons/fa";
 import { AuthContext } from "../context/AuthContext";
 import "./Sidebar2.css";
@@ -35,6 +36,11 @@ const Sidebar = () => {
         <h2 className="sidebar-logo">Prodify-dz</h2>
 
         <nav className="sidebar-nav">
+
+        <NavLink to="/" className="sidebar-link" onClick={handleLinkClick}>
+            <FaTachometerAlt className="icon" /> Dashboard
+          </NavLink>
+
           <NavLink to="/ligne" className="sidebar-link" onClick={handleLinkClick}>
             <FaCogs className="icon" /> Lignes de production
           </NavLink>
@@ -53,6 +59,10 @@ const Sidebar = () => {
 
           <NavLink to="/rapport-graph" className="sidebar-link" onClick={handleLinkClick}>
             <FaChartLine className="icon" /> Graphisme
+          </NavLink>
+
+          <NavLink to="/rapportshift-graph" className="sidebar-link" onClick={handleLinkClick}>
+            <FaChartLine className="icon" /> Graphisme shift
           </NavLink>
 
           <NavLink to="/about" className="sidebar-link" onClick={handleLinkClick}>

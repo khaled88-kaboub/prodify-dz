@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const reportSchema = new mongoose.Schema({
   date: { type: Date, required: true, default: Date.now },
-  groupe: { type: String, enum: ["A", "B", "C" , "D"], required: true },
+  groupe: { type: String, enum: ["BOUFASSA", "MOUHAMMOU", "FEDALA" , "D"], required: true },
   shift: { type: String, enum: ["06:00-14:00", "14:00-22:00", "22:00-06:00"], required: true },
 
   // 🔗 Références
