@@ -35,7 +35,8 @@ const ReportShiftChartPage = () => {
       data.forEach((rep) => {
         const dateShort = rep.date.slice(5, 10); // MM-JJ pour plus de clarté
         const shift = rep.shift;
-        const labelX = `${dateShort} (${shift})`; // Ex: "05-10 (06:00-14:00)"
+        const chef = rep.groupe;
+        const labelX = `${dateShort} (${shift}) (${chef})`; // Ex: "05-10 (06:00-14:00)"
         
         const produit =
           typeof rep.produit === "object"
