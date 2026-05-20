@@ -1,0 +1,82 @@
+.stats-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    gap: 15px;
+  }
+  
+  .filter-group {
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .month-dropdown {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .month-dropdown:focus {
+    border-color: #3b82f6;
+  }
+  
+  .shift-stats-table th {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #2c3e50;
+  }
+  
+  .shift-stats-table td {
+    padding: 12px 8px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .product-cell {
+    text-align: left !important;
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+  
+  .zero-val {
+    color: #94a3b8;
+  }
+  
+  .value-val {
+    color: #0f172a;
+    font-weight: 500;
+  }
+  
+  .dechet-color {
+    background-color: #fffaf0; /* Léger fond orange/jaune pour les déchets */
+    color: #c2410c; /* Texte brun/rouge pour repérer les pertes */
+  }
+  
+  .no-data-cell {
+    text-align: center;
+    padding: 40px !important;
+    color: #64748b;
+    font-style: italic;
+  }
+
+  /* Utilise les mêmes styles que précédemment en ajustant celui-ci : */
+.group-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px; /* Légèrement augmenté pour laisser de la place aux 4 groupes */
+    background: white;
+  }

@@ -65,6 +65,14 @@ const Sidebar = () => {
             <FaChartLine className="icon" /> Graphisme shift
           </NavLink>
 
+          <NavLink to="/stats" className="sidebar-link" onClick={handleLinkClick}>
+            <FaChartLine className="icon" /> Production annuelle
+          </NavLink>
+
+          <NavLink to="/stats-group" className="sidebar-link" onClick={handleLinkClick}>
+            <FaChartLine className="icon" /> Production shift
+          </NavLink>
+
           <NavLink to="/about" className="sidebar-link" onClick={handleLinkClick}>
             <FaInfoCircle className="icon" /> À propos
           </NavLink>

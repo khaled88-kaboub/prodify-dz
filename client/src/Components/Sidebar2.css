@@ -17,6 +17,16 @@
     z-index: 1000;
   }
   
+  .sidebar {
+    /* ... tes styles actuels (background, width, position, etc.) ... */
+    
+    height: 100vh;         /* Force la sidebar à faire exactement la hauteur de l'écran */
+    overflow-y: auto;      /* Ajoute un scroll vertical UNIQUEMENT si le menu déborde */
+    
+    /* Optionnel mais conseillé : structure en Flexbox pour caler la déconnexion en bas */
+    display: flex;
+    flex-direction: column;
+  }
   /* Quand la sidebar est fermée */
   .sidebar.closed {
     transform: translateX(-100%);

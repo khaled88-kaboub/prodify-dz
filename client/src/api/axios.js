@@ -2,6 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: "https://prodify-dz.onrender.com/api/",
+  //https://prodify-dz.onrender.com
 });
 
 api.interceptors.request.use((config) => {

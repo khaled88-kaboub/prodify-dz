@@ -1,0 +1,59 @@
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Active le scroll horizontal si l'écran est petit */
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px; /* Force une largeur minimale pour éviter l'écrasement des mois */
+    background: white;
+  }
+  
+  .stats-table th, .stats-table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .stats-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .product-name-td {
+    text-align: left !important;
+    background-color: #f8f9fa;
+    position: sticky;
+    left: 0; /* Optionnel: Garde la colonne produit visible au scroll */
+    z-index: 1;
+  }
+  
+  .cell-zero {
+    color: #bdc3c7; /* Grise les cellules sans production pour alléger visuellement */
+  }
+  
+  .cell-value {
+    color: #2c3e50;
+    font-weight: 500;
+  }
+  
+  .total-header {
+    background-color: #27ae60 !important;
+  }
+  
+  .total-td {
+    background-color: #f1fcf4;
+    color: #27ae60;
+  }
+  
+  .no-data {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+  }
